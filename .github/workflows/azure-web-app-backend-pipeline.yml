@@ -45,12 +45,12 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-        working-directory: mern/server
+        working-directory: app/server
 
       # Create a zip file of the project for deployment
       - name: Zip artifact for deployment
         run: zip -r release.zip .
-        working-directory: mern/server
+        working-directory: app/server
 
       # Upload the zipped artifact for use in the deployment job
       - name: Upload artifact for deployment job
