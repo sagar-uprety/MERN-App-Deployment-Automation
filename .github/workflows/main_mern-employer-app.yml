@@ -10,6 +10,13 @@ on:
     paths:
       - .github/workflows/main_mern-employer-app.yml
       - 'mern/server/**'
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+    paths:
+      - .github/workflows/main_mern-employer-app.yml
+      - 'mern/server/**'
   workflow_dispatch:
 
 jobs:
