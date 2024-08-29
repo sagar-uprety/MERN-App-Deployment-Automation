@@ -30,7 +30,10 @@ jobs:
         with:
           submodules: true
           lfs: false
-
+      # Set environment variable for VITE_API_URL
+      - name: Set VITE_API_URL
+        run: echo "VITE_API_URL=${{ secrets.VITE_API_URL }}" >> $GITHUB_ENV
+        
       # Build and deploy the app to Azure Static Web Apps
       - name: Build And Deploy
         id: builddeploy
