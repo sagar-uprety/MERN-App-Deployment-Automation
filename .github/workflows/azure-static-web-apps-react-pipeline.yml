@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/main_mern-employer-app.yml
+      - .github/workflows/azure-static-web-apps-react-pipeline.yml
       - 'app/client/**'
   
   # Trigger on pull request events targeting the main branch
