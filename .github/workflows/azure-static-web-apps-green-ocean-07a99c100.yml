@@ -4,10 +4,16 @@ on:
   push:
     branches:
       - main
+    paths:
+      - .github/workflows/main_mern-employer-app.yml
+      - 'mern/client/**'
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
+    paths:
+      - .github/workflows/main_mern-employer-app.yml
+      - 'mern/client/**'
 
 jobs:
   build_and_deploy_job:
