@@ -33,14 +33,13 @@ jobs:
       # Step 2: Install server dependencies
       - name: Install server dependencies
         run: |
-          cd mern/server
           npm install
         working-directory: mern/server
 
       # Step 3: Zip the entire server directory along with the built React app
       - name: Zip artifact for deployment
         run: |
-          cp -r ../client/build .
+          cp -r ../client/dist .
           zip -r release.zip .
         working-directory: mern/server
 
