@@ -5,6 +5,7 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
+    "dev" : "nodemon --env-file=config.env server",
     "start": "node --env-file=config.env server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

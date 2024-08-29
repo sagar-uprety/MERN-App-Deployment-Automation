@@ -9,6 +9,11 @@ app.use(cors());
 app.use(express.json());
 app.use("/record", records);
 
+// This is a simple route to check if the server is running.
+app.get("/", (req, res) => {
+  res.send("Server is running :)").status(200);
+});
+
 // start the Express server
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
