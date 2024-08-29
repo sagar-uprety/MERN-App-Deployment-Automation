@@ -33,7 +33,7 @@ jobs:
       # Set environment variable for VITE_API_URL
       - name: Set VITE_API_URL
         run: echo "VITE_API_URL=${{ secrets.VITE_API_URL }}" >> $GITHUB_ENV
-        
+
       # Build and deploy the app to Azure Static Web Apps
       - name: Build And Deploy
         id: builddeploy
@@ -45,6 +45,8 @@ jobs:
           app_location: "/app/client" # Path to the app source code
           api_location: "" # Path to API source code (optional)
           output_location: "dist" # Directory for built app content (optional)
+        # env:
+        #   VITE_API_URL: ${{ secrets.VITE_API_URL }}
 
   close_pull_request_job:
     # Run job when a pull request is closed
