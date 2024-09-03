@@ -8,7 +8,7 @@ on:
       [ main ]
     paths:
     - 'app/server/**'
-    - '.github/workflows/mern-backend-AutoDeployTrigger-08f750e1-f242-4781-9464-d3d99f750fe2.yml'
+    - '.github/workflows/mern-backend-azure-container-app-auto-deploy'
 
   # Allow manual trigger 
   workflow_dispatch:      
@@ -41,7 +41,5 @@ jobs:
           containerAppName: mern-backend
           resourceGroup: DefaultResourceGroup-EUS
           imageToBuild: employermernapp.azurecr.io/mern-backend:${{ github.sha }}
-          _buildArgumentsKey_: |
-            _buildArgumentsValues_
-
-
+          environmentVariables : |
+            ATLAS_URI=${{ secrets.ATLAS_URI }}
