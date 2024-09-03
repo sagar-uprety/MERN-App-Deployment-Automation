@@ -30,6 +30,7 @@ jobs:
         with:
           submodules: true
           lfs: false
+          
       # Set environment variable for VITE_API_URL
       - name: Set VITE_API_URL
         run: echo "VITE_API_URL=${{ secrets.VITE_API_URL }}" >> $GITHUB_ENV
@@ -46,7 +47,7 @@ jobs:
           api_location: "" # Path to API source code (optional)
           output_location: "dist" # Directory for built app content (optional)
         # env:
-        #   VITE_API_URL: ${{ secrets.VITE_API_URL }}
+          # VITE_API_URL: ${{ secrets.VITE_API_URL }}
 
   close_pull_request_job:
     # Run job when a pull request is closed

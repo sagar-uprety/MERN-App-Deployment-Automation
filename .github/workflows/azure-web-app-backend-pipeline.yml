@@ -13,17 +13,6 @@ on:
       - .github/workflows/azure-web-app-backend-pipeline.yml
       - 'app/server/**'
   
-  # Trigger the workflow on pull request events targeting the main branch
-  pull_request:
-    # Types of pull request events to trigger the workflow
-    types: [opened, synchronize, reopened, closed]
-    branches:
-      - main
-    # Only trigger if changes are made to these files or directories
-    paths:
-      - .github/workflows/main_mern-employer-app.yml
-      - 'app/server/**'
-  
   # Allow manual triggering of the workflow from the GitHub Actions UI
   workflow_dispatch:
 
