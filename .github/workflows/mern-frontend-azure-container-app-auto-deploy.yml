@@ -8,7 +8,7 @@ on:
       [ main ]
     paths:
     - 'app/client/**'
-    - '.github/workflows/mern-frontend-AutoDeployTrigger-3ab5c7b4-4e8d-42de-927d-8b0a52d19794.yml'
+    - '.github/workflows/mern-frontend-azure-container-app-auto-deploy.yml'
 
   # Allow manual trigger 
   workflow_dispatch:      
@@ -42,6 +42,7 @@ jobs:
           resourceGroup: DefaultResourceGroup-EUS
           imageToBuild: employermernapp.azurecr.io/mern-frontend:${{ github.sha }}
           _buildArgumentsKey_: |
-            _buildArgumentsValues_
+            VITE_API_URL=${{ secrets.VITE_API_URL }}
+
 
 

@@ -43,3 +43,4 @@ jobs:
           imageToBuild: employermernapp.azurecr.io/mern-backend:${{ github.sha }}
           environmentVariables : |
             ATLAS_URI=${{ secrets.ATLAS_URI }}
+          
