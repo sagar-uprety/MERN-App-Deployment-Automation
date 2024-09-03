@@ -1,2 +1,12 @@
-node_modules/
-config.env
+# This .gitignore file specifies intentionally untracked files that Git should ignore.
+# It is used to exclude certain files and directories from being tracked by Git.
+
+# Ignore the docker.env and .env file
+docker.env
+/.env 
+
+# Ignore all node_modules directories
+**/node_modules/
+
+# Ignore the config.env file in the /app/server directory
+/app/server/config.env

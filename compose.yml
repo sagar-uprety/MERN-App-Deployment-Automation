@@ -1,0 +1,27 @@
+services:
+  nodejs-api:
+    build:
+      context: ./app/server
+    restart: always
+    ports:
+      - "5050:5050" # Exposes port 5050 in the container to port 5050 on the host
+    networks:
+      - app-network
+    env_file: docker.env
+
+  react-app:
+    build:
+      context: ./app/client
+      args:
+        VITE_API_URL: ${VITE_API_URL} # Use an environment variable for the API URL
+    restart: always
+    ports:
+      - "80:80" # Exposes port 80 in the container to port 80 on the host
+    networks:
+      - app-network
+    depends_on:
+      - nodejs-api # Waits for the nodejs-api service to be "healthy" before starting this service
+
+networks:
+  app-network:
+    driver: bridge

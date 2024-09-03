@@ -15,10 +15,9 @@ COPY . .
 
 # Set environment variable for Vite build
 ARG VITE_API_URL
-ENV VITE_API_URL=${VITE_API_URL}
 
 # Build the React app for production
-RUN npm run build
+RUN npm run build 
 
 # Stage 2: Serve the built app with Nginx
 FROM nginx:stable-alpine
