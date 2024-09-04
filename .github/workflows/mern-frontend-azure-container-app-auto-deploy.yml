@@ -1,4 +1,4 @@
-name: Trigger auto deployment for mern-frontend
+name: Trigger auto deployment for MERN Frontend (Azure Container Apps)
 
 # When this action will be executed
 on:
