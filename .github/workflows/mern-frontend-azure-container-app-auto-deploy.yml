@@ -8,7 +8,7 @@ on:
       [ main ]
     paths:
     - 'app/client/**'
-    - '.github/workflows/containers/mern-frontend-azure-container-app-auto-deploy.yml'
+    - '.github/workflows/mern-frontend-azure-container-app-auto-deploy.yml'
 
   # Allow manual trigger 
   workflow_dispatch:      
