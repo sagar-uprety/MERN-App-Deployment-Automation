@@ -46,4 +46,4 @@ jobs:
             ATLAS_URI=${{ secrets.ATLAS_URI }}
 
       - name: Get Backend API URL
-        run: echo "Output URL: ${{ steps.build-and-push.outputs.output-url }}"
+        run: echo " Backend API URL is ${{ steps.build-and-push.outputs.container-app-url }}"
