@@ -45,6 +45,3 @@ jobs:
           buildArguments: |
             VITE_API_URL=${{ secrets.VITE_API_CONTAINER_APP_URL }}
 
-      - name: Get Frontend URL
-        run: echo "Frontend URL is ${{ steps.build-and-push.outputs.container-app-url }}"
-  
