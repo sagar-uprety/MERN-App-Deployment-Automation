@@ -84,3 +84,6 @@ jobs:
           app-name: 'mern-employer-app'
           slot-name: 'Production'
           package: .
+          
+        
+        

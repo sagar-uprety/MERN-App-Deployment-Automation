@@ -5,10 +5,10 @@ on:
   # Automatically trigger it when detected changes in repo
   push:
     branches: 
-      [ main ]
+      - main
     paths:
-    - 'app/server/**'
-    - '.github/workflows/mern-backend-azure-container-app-auto-deploy.yml'
+      - 'app/server/**'
+      - '.github/workflows/containers/mern-backend-azure-container-app-auto-deploy.yml'
 
   # Allow manual trigger 
   workflow_dispatch:      
@@ -32,6 +32,7 @@ jobs:
           subscription-id: ${{ secrets.MERNBACKEND_AZURE_SUBSCRIPTION_ID }}
 
       - name: Build and push container image to registry
+        id: build-and-push
         uses: azure/container-apps-deploy-action@v2
         with:
           appSourcePath: ${{ github.workspace }}/app/server 
@@ -43,4 +44,6 @@ jobs:
           imageToBuild: employermernapp.azurecr.io/mern-backend:${{ github.sha }}
           environmentVariables : |
             ATLAS_URI=${{ secrets.ATLAS_URI }}
-          
+
+      - name: Get Backend API URL
+        run: echo "Output URL: ${{ steps.build-and-push.outputs.output-url }}"
