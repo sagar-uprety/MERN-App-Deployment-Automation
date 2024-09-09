@@ -125,17 +125,29 @@ REACT_APP_API_URL=http://localhost:5000/api
 
 ### Building and Running with Docker Compose 
 
-1. Build the Docker images:
+1. Create a .env file (root folder) and add:
+    ```
+    VITE_API_URL=http://localhost:5050
+    ```
+
+2. Add the following in docker.env (root folder)
+    ``` 
+     ATLAS_URI=<your-mongodb-ATLAS-connection-string>
+     PORT=5050
+    ```
+
+
+3. Build the Docker images:
     ```sh
     docker-compose build
     ```
 
-2. Run the Docker containers:
+4. Run the Docker containers:
     ```sh
     docker-compose up
     ```
 
-3. Access the application: Open your browser and navigate to http://localhost:80 or http://localhost.
+5. Access the application: Open your browser and navigate to http://localhost:80 or http://localhost.
 
 ## Contributing
 
