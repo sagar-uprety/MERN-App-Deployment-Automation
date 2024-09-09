@@ -109,22 +109,6 @@ mern-stack-example/
 
 ## Docker Support
 
-### Environment Variables Required for Docker Compose Setup
-
-Create a `.env` file in both the `server` and `client` directories to configure environment variables.
-
-Server `.env`:
-```
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/myapp
-JWT_SECRET=mysecretkey
-```
-
-Client `.env`:
-```
-REACT_APP_API_URL=http://localhost:5000/api
-```
-
 ### Building and Running with Docker Compose 
 
 1. Create a .env file (root folder) and add:
