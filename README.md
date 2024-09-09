@@ -105,7 +105,11 @@ mern-stack-example/
 - `client`: Contains the client-side code.
 
 
-## Environment Variables
+
+
+## Docker Support
+
+### Environment Variables Required for Docker Compose Setup
 
 Create a `.env` file in both the `server` and `client` directories to configure environment variables.
 
@@ -120,8 +124,6 @@ Client `.env`:
 ```
 REACT_APP_API_URL=http://localhost:5000/api
 ```
-
-## Docker Support
 
 ### Building and Running with Docker Compose 
 
