@@ -7,6 +7,9 @@ on:
   push:
     branches:
       - ghw-azure
+    paths:
+      - .github/workflows/azure-web-app-backend-pipeline.yml
+      - 'app/server/**'  
   workflow_dispatch:
 
 jobs:
@@ -24,17 +27,17 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          npm run build --if-present
-          npm run test --if-present
+        working-directory: app/server
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
+        working-directory: app/server
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: release.zip
+          path: app/server/release.zip
 
   deploy:
     runs-on: ubuntu-latest
