@@ -71,4 +71,3 @@ jobs:
           app-name: 'ghw-mern-demo-backend'
           slot-name: 'Production'
           package: .
-          

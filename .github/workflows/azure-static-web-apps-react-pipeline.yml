@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - ghw-azure
+    paths:
+      - .github/workflows/azure-static-web-apps-react-pipeline.yml
+      - 'app/client/**'
+    
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
@@ -19,6 +23,11 @@ jobs:
         with:
           submodules: true
           lfs: false
+          
+      # Set environment variable for VITE_API_URL
+      - name: Set VITE_API_URL
+        run: echo "VITE_API_URL=${{ secrets.VITE_API_URL }}" >> $GITHUB_ENV
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
