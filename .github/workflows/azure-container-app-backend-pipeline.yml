@@ -7,8 +7,8 @@ on:
     branches: 
       [ ghw-azure ]
     paths:
-    - '**'
-    - '.github/workflows/ghwmernbackend-AutoDeployTrigger-5bd52948-e48d-4125-b7aa-708d05fb0b9f.yml'
+    - './app/server/**'
+    - '.github/workflows/azure-container-app-backend-pipeline.yml'
 
   # Allow manual trigger 
   workflow_dispatch:      
@@ -42,7 +42,6 @@ jobs:
           containerAppName: ghwmernbackend
           resourceGroup: ghw-mern
           imageToBuild: ghwmernbackend.azurecr.io/ghwmernbackend:${{ github.sha }}
-          _buildArgumentsKey_: |
-            _buildArgumentsValues_
-
+          environmentVariables : |
+            ATLAS_URI=${{ secrets.ATLAS_URI }}
 
