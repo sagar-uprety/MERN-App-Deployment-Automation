@@ -42,7 +42,7 @@ jobs:
           containerAppName: ghwmernfrontend
           resourceGroup: ghw-mern
           imageToBuild: ghwmernfrontend.azurecr.io/ghwmernfrontend:${{ github.sha }}
-          _buildArgumentsKey_: |
+          buildArguments: |
             VITE_API_URL=${{ secrets.VITE_API_CONTAINER_APP_URL }}
 
 
