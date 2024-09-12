@@ -42,7 +42,7 @@ jobs:
           containerAppName: clean-backend
           resourceGroup: ghw-mern
           imageToBuild: ghwmernbackend.azurecr.io/clean-backend:${{ github.sha }}
-          _buildArgumentsKey_: |
-            _buildArgumentsValues_
+          environmentVariables : |
+            ATLAS_URI=${{ secrets.ATLAS_URI }}
 
 
