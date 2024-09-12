@@ -7,8 +7,8 @@ on:
     branches: 
       [ ghw-azure ]
     paths:
-    - '**'
-    - '.github/workflows/ghwmernfrontend-AutoDeployTrigger-cba72f45-a32b-4ea1-940f-ea564b9c6065.yml'
+    - './app/client/**'
+    - '.github/workflows/azure-container-app-frontend-pipeline.yml'
 
   # Allow manual trigger 
   workflow_dispatch:      
@@ -43,6 +43,6 @@ jobs:
           resourceGroup: ghw-mern
           imageToBuild: ghwmernfrontend.azurecr.io/ghwmernfrontend:${{ github.sha }}
           _buildArgumentsKey_: |
-            _buildArgumentsValues_
+            VITE_API_URL=${{ secrets.VITE_API_CONTAINER_APP_URL }}
 
 
