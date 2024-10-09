@@ -16,10 +16,10 @@ The main purpose of this repo is to serve as an example of how one can deploy a 
 
 ## Guiding Video Tutorials and Notion Guide
 
-1. Notion Guide (Without Docker): Click [Here](https://bit.ly/mern-deployment). Watch Full Tutorail 👇
+1. Notion Guide (Without Docker - Azure Static Web App and Azure Web App): Click [Here](https://bit.ly/mern-deployment). Watch Full Tutorial 👇
 [![Watch the Video ](https://img.youtube.com/vi/Ibh-2J1lJ-s/maxresdefault.jpg)](https://youtu.be/Ibh-2J1lJ-s)
 
-2. Notion Guide (With Docker): Click Here https://bit.ly/docker-mlh (Checkout Part 3 of this guide). Watch Full Tutorail 👇
+2. Notion Guide (With Docker - Azure Container Apps): Click [Here](https://bit.ly/docker-mlh) (Checkout Part 3 of this guide). Watch Full Tutorial 👇
 [![Watch the video](https://img.youtube.com/vi/AGHKvoleSck/maxresdefault.jpg)](https://youtu.be/AGHKvoleSck)
 
 ## Technology Stack 
