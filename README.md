@@ -3,12 +3,24 @@
 
 This project is a MERN (MongoDB, Express.js, React, and Node.js) Application. It's a simple employee management app that let's you add and edit records of your employee. 
 
-The main purpose of this repo is to serve as an example of how one can deploy a modern web application using Azure Cloud Services.
+The main purpose of this repo is to serve as an example of how one can deploy a modern web application using Azure Cloud Services in two ways.
+
+1. CI/CD Workflows to deploy to Azure Static Web App and Azure Web App
+2. CI/CD Workflows to deploy to Azure Container Apps 
 
 
 ## Overview Architecture
 
 ![alt text](architecture-diagram.png)
+
+
+## Guiding Video Tutorials and Notion Guide
+
+1. Notion Guide (Without Docker): Click [Here](https://bit.ly/mern-deployment). Watch Full Tutorail 👇
+[![Watch the Video ](https://img.youtube.com/vi/Ibh-2J1lJ-s/maxresdefault.jpg)](https://youtu.be/Ibh-2J1lJ-s)
+
+2. Notion Guide (With Docker): Click Here https://bit.ly/docker-mlh (Checkout Part 3 of this guide). Watch Full Tutorail 👇
+[![Watch the video](https://img.youtube.com/vi/AGHKvoleSck/maxresdefault.jpg)](https://youtu.be/AGHKvoleSck)
 
 ## Technology Stack 
 
@@ -19,7 +31,7 @@ The main purpose of this repo is to serve as an example of how one can deploy a 
 - **Azure Web App**: PaaS by Azure to deploy Express Application
 - **Azure Static App**: PaaS by Azure to deploy Static Assets (React App)
 - **MongoDB**: NoSQL Database deployed on MongoDB Atlas
-
+- **Azure Container Apps**: PaaS by Azure to deploy containers
 
 ## Prerequisites for Local Deployment
 
@@ -103,7 +115,6 @@ mern-stack-example/
 
 - `server`: Contains the server-side code.
 - `client`: Contains the client-side code.
-
 
 
 
