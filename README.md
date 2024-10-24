@@ -1,5 +1,5 @@
 
-# MEAN Stack Sample App - Deploy to Azure with CI/CD built-in
+# MERN Stack Sample App - Deploy to Azure with CI/CD built-in
 
 This project is a MERN (MongoDB, Express.js, React, and Node.js) Application. It's a simple employee management app that let's you add and edit records of your employee. 
 
